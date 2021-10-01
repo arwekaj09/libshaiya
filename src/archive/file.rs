@@ -4,10 +4,11 @@ use crate::utils::ShaiyaIo;
 use std::collections::VecDeque;
 
 /// A virtual folder in a Shaiya archive.
+#[derive(Clone)]
 pub struct SFolder {
-    name: String,
-    files: Vec<SFile>,
-    folders: Vec<SFolder>
+    pub name: String,
+    pub files: Vec<SFile>,
+    pub folders: Vec<SFolder>
 }
 
 /// An entry of file data.
