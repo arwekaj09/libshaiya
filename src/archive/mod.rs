@@ -100,12 +100,12 @@ impl Archive {
         cursor.seek(SeekFrom::Current(4))?;     // The total number of files (the client doesn't even use this).
         cursor.seek(SeekFrom::Current(40))?;    // Skip the next 40 bytes (again - they don't seem to do anything).
 
-        // Read the name of the root folder.
+        // Skip the name of the root folder - we default initialise it to "data".
         let root_name_len = cursor.read_u32::<LittleEndian>()?;
-        let root_name = cursor.read_fixed_length_string(root_name_len)?;
+        cursor.seek(SeekFrom::Current(root_name_len as i64))?;
 
         // Initialise an empty root folder, and parse it's contents.
-        self.root = SFolder::new(root_name);
+        self.root = SFolder::new(DEFAULT_ROOT_NAME.to_owned());
         self.root.parse(&mut cursor)
     }
 
