@@ -1,0 +1,10 @@
+[package]
+name    = "libshaiya"
+version = "0.0.1"
+authors = ["Triston Plummer"]
+edition = "2018"
+
+[dependencies]
+anyhow      = "1.0"
+byteorder   = "1.4"
+num         = "0.4"
