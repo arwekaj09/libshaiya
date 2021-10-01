@@ -7,7 +7,7 @@ use crate::utils::ShaiyaIo;
 use byteorder::{ReadBytesExt, LittleEndian};
 use std::collections::VecDeque;
 
-mod file;
+pub mod file;
 
 /// The magic value of the SAH file.
 pub const SAH_MAGIC_VALUE: &'static str = "SAH";
