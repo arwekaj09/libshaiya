@@ -31,7 +31,7 @@ pub const DEFAULT_ROOT_NAME: &'static str = "data";
 pub struct Archive {
     header_file: File,
     data_file: File,
-    root: SFolder,
+    pub root: SFolder,
 }
 
 impl Archive {
