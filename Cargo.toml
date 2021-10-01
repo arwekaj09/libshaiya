@@ -1,11 +1,12 @@
 [package]
-name        = "libshaiya"
-version     = "0.0.1"
-description = "A library for interacting with Shaiya binary files."
-repository  = "https://github.com/OpenShaiya/libshaiya/"
-readme      = "README.md"
-authors     = ["Triston Plummer"]
-edition     = "2018"
+name            = "libshaiya"
+version         = "0.0.1"
+description     = "A library for interacting with Shaiya binary files."
+repository      = "https://github.com/OpenShaiya/libshaiya/"
+license-file    = "LICENSE"
+readme          = "README.md"
+authors         = ["Triston Plummer"]
+edition         = "2018"
 
 [dependencies]
 anyhow      = "1.0"
