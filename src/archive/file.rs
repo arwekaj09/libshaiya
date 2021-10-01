@@ -85,6 +85,10 @@ impl SFolder {
         &self.files
     }
 
+    /// Gets a file that might be contained within this folder.
+    ///
+    /// # Argument
+    /// * `parts`   - A deque containing the parts of the path.
     pub fn get(&self, parts: &mut VecDeque<&str>) -> Option<SFile> {
         // Loop through the parts of the path.
         for part in parts.into_iter() {
