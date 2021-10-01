@@ -1,6 +1,7 @@
 # Ignore build files
 .idea/*
 target/*
+Cargo.lock
 
 # Ignore archive files (as they're quite large and only used for testing)
 ep5/*
